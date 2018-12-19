@@ -17,6 +17,8 @@ pipeline {
     post {
         success {
             archiveArtifacts artifacts: spigot*.jar, fingerprint: true
+        }
+        always {
             cleanWs()
         }
     }
