@@ -1,4 +1,5 @@
 pipeline {
+    agent none
     parameters {
         string(name: 'version', defaultValue: 'latest', description: 'ビルドするspigotのバージョンを指定する。')
     }
