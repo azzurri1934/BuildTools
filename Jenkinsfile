@@ -7,6 +7,7 @@ pipeline {
         stage('build'){
             agent any
             steps {
+                cleanWs()
                 //sh '#!/bin/bash -x'
                 sh 'curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar'
                 //git config --global --unset core.autocrlf
