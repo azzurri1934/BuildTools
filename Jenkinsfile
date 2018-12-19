@@ -7,7 +7,7 @@ pipeline {
         stage('build'){
             agent any
             steps {
-                cleanWs()
+                //cleanWs()
                 sh 'BuildTools.sh $version'
             }
         }
