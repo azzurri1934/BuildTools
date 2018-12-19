@@ -5,6 +5,7 @@ pipeline {
     }
     stages {
         stage('build'){
+            agent any
             steps {
                 //sh '#!/bin/bash -x'
                 curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
