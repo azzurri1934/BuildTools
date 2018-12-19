@@ -6,10 +6,8 @@ pipeline {
     stages {
         stage('build'){
             steps {
-                dir("$WORKSPACE") {
-                  //cleanWs()
-                  sh './BuildTools.sh $version'
-                }
+                //cleanWs()
+                sh './BuildTools.sh $version'
             }
         }
     }
