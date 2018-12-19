@@ -7,7 +7,7 @@ pipeline {
         stage('build'){
             steps {
                 //cleanWs()
-                echo $WORKSPACE
+                sh 'echo $WORKSPACE'
                 sh 'pwd'
                 sh 'BuildTools.sh $version'
             }
