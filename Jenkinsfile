@@ -8,12 +8,7 @@ pipeline {
             agent any
             steps {
                 cleanWs()
-                //sh '#!/bin/bash -x'
-                sh 'curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar'
-                //git config --global --unset core.autocrlf
-                sh 'java -Xmx1024M -jar BuildTools.jar --rev $version'
-                //sh 'echo "hello"'
-                //echo "hello2"
+                sh 'BuildTools.sh $version'
             }
         }
     }
