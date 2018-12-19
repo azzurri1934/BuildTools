@@ -8,7 +8,7 @@ pipeline {
             steps {
                 dir("$WORKSPACE") {
                   //cleanWs()
-                  sh 'BuildTools.sh $version'
+                  sh './BuildTools.sh $version'
                 }
             }
         }
