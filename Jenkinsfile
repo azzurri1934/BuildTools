@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('build'){
             steps {
+                sh 'chmod 744 ./BuildTools.sh'
                 sh './BuildTools.sh $version'
             }
         }
