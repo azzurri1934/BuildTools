@@ -17,7 +17,7 @@ pipeline {
     }
     post {
         success {
-            archiveArtifacts artifacts: 'spigot-1.13.2.jar', fingerprint: true
+            archiveArtifacts artifacts: 'spigot-*.jar', fingerprint: true
         }
         //always {
         //    cleanWs()
