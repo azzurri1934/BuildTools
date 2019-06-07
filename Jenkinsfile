@@ -17,7 +17,7 @@ pipeline {
     }
     post {
         success {
-            archiveArtifacts artifacts: 'spigot-*.jar', fingerprint: true
+            archiveArtifacts artifacts: 'spigot-$version.jar', fingerprint: true
         }
         //always {
         //    cleanWs()
