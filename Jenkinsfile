@@ -19,8 +19,8 @@ pipeline {
         success {
             archiveArtifacts artifacts: 'spigot-*.jar', fingerprint: true
         }
-        //always {
-        //    cleanWs()
-        //}
+        cleanup {
+            deleteDir()
+        }
     }
 }
